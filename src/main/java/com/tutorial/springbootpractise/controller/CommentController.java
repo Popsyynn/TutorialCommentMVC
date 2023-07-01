@@ -59,7 +59,7 @@ public class CommentController {
         return new ResponseEntity<>(comment , HttpStatus.OK);
     }
 
-    //delete comment by comment Id
+    //delete comment by comment Id only
     @DeleteMapping("/comments/{id}")
     public ResponseEntity<HttpStatus> deleteCommentById(@PathVariable Long id){
         commentRepository.deleteById(id);
